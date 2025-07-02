@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍔BurguerManía</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css ">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🍔 BurguerManía</div>
+        <ul class="nav-links">
+            <li><a href="#promociones">Promociones</a></li>
+            <li><a href="#reservas">Reservas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li class="cart-icon" onclick="toggleCart()">
+                🛒 Carrito (<span id="cart-count">0</span>)
+            </li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Hamburguesas Artesanales de Calidad</h1>
+        <p>Las mejores hamburguesas de la ciudad, hechas con ingredientes frescos y amor</p>
+    </section>
+<br>
+  <!-- Promociones -->
+<section class="promociones" id="promociones">
+    <div class="container" id="promo-container">
+        <!-- Contenido dinámico desde CSV -->
+    </div>
+</section>
+<br>
+    <!-- Carrusel 
+    <section class="carousel">
+        <div class="carousel-container" id="carousel">
+            <img src="Corre!! Y trae tu (39).jpg" alt="Hamburguesa 1">
+            <img src="Corre!! Y trae tu (40).jpg" alt="Hamburguesa 2">
+            <img src="Corre!! Y trae tu (39).jpg" alt="Hamburguesa 3">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section> -->
+<!-- Image Carousel -->
+    <section class="carousel-section">
+        <h2 class="carousel-title">Nuestros Productos Destacados</h2>
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Items duplicados para bucle infinito -->
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="1.jpg" alt="Producto 1">
+                        <div class="carousel-info">
+                            <h3>Producto 1</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$99.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="2.jpg" alt="Producto 2">
+                        <div class="carousel-info">
+                            <h3>Producto 2</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$89.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="3.jpg" alt="Producto 3">
+                        <div class="carousel-info">
+                            <h3>Producto 3</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$109.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="1.jpg" alt="Producto 4">
+                        <div class="carousel-info">
+                            <h3>Producto 4</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$79.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="2.jpg" alt="Producto 5">
+                        <div class="carousel-info">
+                            <h3>Producto 5</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$119.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicados para bucle infinito -->
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="3.jpg" alt="Producto 1">
+                        <div class="carousel-info">
+                            <h3>Producto 1</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$99.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="1.jpg" alt="Producto 2">
+                        <div class="carousel-info">
+                            <h3>Producto 2</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$89.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="2.jpg" alt="Producto 3">
+                        <div class="carousel-info">
+                            <h3>Producto 3</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$109.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="3.jpg" alt="Producto 4">
+                        <div class="carousel-info">
+                            <h3>Producto 4</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$79.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                        <img src="2.jpg" alt="Producto 5">
+                        <div class="carousel-info">
+                            <h3>Producto 5</h3>
+                            <p>Descripción breve del producto.</p>
+                            <div class="carousel-price">$119.99</div>
+                            <button class="carousel-button">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+    <!-- Reservas -->
+    <section class="reservas" id="reservas">
+        <h2>Menú para Reservar<br>(Reserva con 24h de anticipacion)</h2>
+        <p></p>
+        <div class="productos-container" id="productos-container">
+            <!-- Productos estáticos de ejemplo -->
+            <div class="producto">
+                <img src="1.jpg" alt="Hamb Clásica">
+                <h3>Hamburguesa Clásica</h3>
+                <p>$8.99</p>
+                <button onclick="addToCart('Hamburguesa Clásica', 8.99)">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="2.jpg" alt="Hamb Doble">
+                <h3>Hamburguesa Doble</h3>
+                <p>$12.99</p>
+                <button onclick="addToCart('Hamburguesa Doble', 12.99)">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="4.jpg" alt="Hamb Vegana">
+                <h3>Hamburguesa Vegana</h3>
+                <p>$9.99</p>
+                <button onclick="addToCart('Hamburguesa Vegana', 9.99)">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito -->
+    <div class="carrito" id="carrito">
+        <div class="carrito-header">
+            <h3>Tu Pedido</h3>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div class="carrito-items" id="carrito-items">
+            <!-- Items dinámicos -->
+        </div>
+        <div class="carrito-total">
+            <p>Total: $<span id="total">0.00</span></p>
+            <button onclick="enviarWhatsApp()" class="reservar-btn">Reservar por WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>🍔 BurguerManía</h3>
+                <p>Av. Principal 123, Ciudad</p>
+                <p>Teléfono: +57 300 123 4567</p>
+            </div>
+            <div class="redes-sociales">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 BurguerManía. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
